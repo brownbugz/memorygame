@@ -31,21 +31,19 @@ var cardsInPlay = [ ];
 
 var checkForMatch = function() {
 	if (cardsInPlay[0] === cardsInPlay[1]) {
-	var message = "You found a match!";
+	console.log("You found a match!");
 	} 
 	else {
-	message = "Sorry, try again.";
+	console.log("Sorry, try again.");
+	alert("Sorry, try again.");
 	}
-	console.log(message);
-	alert(message);
 }
 
 var flipCard = function(cardId) {
-	var chosen_card = cards[cardId]
-	console.log("User flipped " + chosen_card.rank);
-	console.log(chosen_card.cardImage);
-	console.log(chosen_card.suit);
-	cardsInPlay.push(chosen_card.rank);
+	console.log("User flipped " + cards[cardId].rank);
+	console.log(cards[cardId].cardImage);
+	console.log(cards[cardId].suit);
+	cardsInPlay.push(cards[cardId].rank);
 	if (cardsInPlay.length === 2) {
 		checkForMatch();
 	}
