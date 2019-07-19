@@ -31,7 +31,7 @@ var cardsInPlay = [ ];
 
 var checkForMatch = function() {
 	if (cardsInPlay[0] === cardsInPlay[1]) {
-	message = "You found a match!";
+	var message = "You found a match!";
 	} 
 	else {
 	message = "Sorry, try again.";
@@ -41,7 +41,7 @@ var checkForMatch = function() {
 }
 
 var flipCard = function(cardId) {
-	chosen_card = cards[cardId]
+	var chosen_card = cards[cardId]
 	console.log("User flipped " + chosen_card.rank);
 	console.log(chosen_card.cardImage);
 	console.log(chosen_card.suit);
